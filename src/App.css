@@ -1,0 +1,145 @@
+body {
+    background-color: #0b032d;
+    background-image: url("./static/overview-bg.png");
+    background-size: 2000px;
+    background-repeat: no-repeat;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.75em;
+}
+
+.menu {
+    font-weight: bold;
+    background: #f42272;
+    width: 160px;
+    height: 100%;
+    padding-left: 70px;
+    position: fixed;
+    z-index: 100;
+    -webkit-box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    right: -130px;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    color: #f3b9c5;
+}
+.menu:hover, .menu:focus {
+    transform: translate3d(-130px, 0, 0);
+}
+
+.menu .title {
+    top: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    transform: rotate(270deg);
+    left: -10px;
+    font-weight: 800;
+    font-size: 15px;
+}
+.menu .nav {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-weight: 100;
+}
+.menu .nav p {
+    padding-bottom: 30px;
+}
+.menu .nav p a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+}
+.menu .nav p a:hover {
+    color: #0b032d;
+}
+
+.row {
+    padding-bottom: 30px;
+}
+
+#overview {
+    color: #efecfd;
+    text-align: justify;
+    padding-top: 40px;
+}
+
+#overview h4 {
+    padding-top: 10px;
+    text-align: left;
+}
+
+#agenda {
+    min-width: 300px;
+    max-width: 500px;
+    margin: auto;
+    padding: 30px 20px;
+    text-align: justify;
+}
+
+#agenda .session {
+    color: #efecfd;
+    border-top: 3px solid;
+    border-image: linear-gradient(to right, #efecfd 0%, #f42272 100%);
+    border-image-slice: 1;
+    border-width: 3px;
+    margin: 0;
+    padding: 40px;
+    counter-increment: section;
+    position: relative;
+}
+
+#agenda .session:nth-child(odd) {
+    border-right: 3px solid;
+    padding-left: 0;
+}
+
+#agenda .session:nth-child(odd)::before {
+        left: 100%;
+        margin-left: -20px;
+}
+
+#agenda .session:nth-child(even) {
+    border-left: 3px solid;
+    padding-right: 0;
+}
+
+#agenda .session:nth-child(even)::before {
+    right: 100%;
+    margin-right: -20px;
+}
+
+#agenda .session:first-child {
+    border-top: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+#agenda .session:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#footnote {
+    color: #efecfd;
+    margin-top: 30px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#footnote p {
+    color: #f3b9c5;
+    font-size: 12px;
+    padding: 0px 15px;
+}
