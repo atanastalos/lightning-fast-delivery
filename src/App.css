@@ -25,6 +25,7 @@ p {
     -webkit-transition: all 0.3s;
     color: #f3b9c5;
 }
+
 .menu:hover, .menu:focus {
     transform: translate3d(-130px, 0, 0);
 }
@@ -51,6 +52,7 @@ p {
 }
 .menu .nav p {
     padding-bottom: 30px;
+    font-weight: bold;
 }
 .menu .nav p a {
     display: block;
@@ -127,6 +129,34 @@ p {
 #agenda .session:last-child {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
+}
+
+.extra {
+    color: #f88cb2;
+}
+
+.extra .extratext {
+    visibility: hidden;
+    width: 410px;
+    background-color: #f42272;
+    color: #fff;
+    text-align: justify;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+}
+
+.extra:hover {
+    color: #f42272;
+}
+
+.extra:hover .extratext {
+    visibility: visible;
+}
+
+.extratext {
+    padding: 10px;
 }
 
 #footnote {

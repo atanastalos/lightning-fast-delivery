@@ -8,7 +8,6 @@ import flaticon from './static/flaticons/flaticon-logo.png';
 import brain from './static/flaticons/brain.png';
 import dev from './static/flaticons/development.png';
 import puzzle from './static/flaticons/puzzle.png';
-import star from './static/flaticons/star.png';
 
 function App() {
     return (
@@ -74,7 +73,10 @@ function App() {
                     <p>10:30am - Lightning talk: Maximizing value by achieving clarity</p>
                     <p>10:40am - Coding time</p>
                     <p>11:40am - Retrospective</p>
-                    <p>12:00am - Lunch and networking time <img src={star} /></p>
+                    <div className="extra">
+                        <p>12:00am - Lunch and networking time</p>
+                        <span class="extratext">During lunch time you will be paired with other participants to talk to while you are eating your lunch.</span>
+                    </div>
                 </div>
                 <div className="session">
                     <p>12:50am - Lightning talk: The 3 stages of product maturity and why that matters to you</p>
