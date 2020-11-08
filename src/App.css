@@ -10,6 +10,11 @@ p {
     line-height: 1.75em;
 }
 
+h2 {
+    color: #f42272;
+    padding-bottom: 20px;
+}
+
 .menu {
     font-weight: bold;
     background: #f42272;
@@ -42,6 +47,7 @@ p {
     font-weight: 800;
     font-size: 15px;
 }
+
 .menu .nav {
     position: absolute;
     top: 50%;
@@ -50,10 +56,12 @@ p {
     transform: translateY(-50%);
     font-weight: 100;
 }
+
 .menu .nav p {
     padding-bottom: 30px;
     font-weight: bold;
 }
+
 .menu .nav p a {
     display: block;
     text-decoration: none;
@@ -61,6 +69,7 @@ p {
     transition: all 0.3s;
     -webkit-transition: all 0.3s;
 }
+
 .menu .nav p a:hover {
     color: #0b032d;
 }
@@ -70,26 +79,27 @@ p {
 }
 
 #overview {
-    color: #efecfd;
     text-align: justify;
     padding-top: 40px;
+    color: #efecfd;
 }
 
 #overview h4 {
     padding-top: 10px;
     text-align: left;
+    color: #f42272;
 }
 
 #agenda {
     min-width: 300px;
     max-width: 500px;
     margin: auto;
-    padding: 30px 20px;
+    padding: 30px 20px 30px 0px;
     text-align: justify;
+    color: #efecfd;
 }
 
 #agenda .session {
-    color: #efecfd;
     border-top: 3px solid;
     border-image: linear-gradient(to right, #efecfd 0%, #f42272 100%);
     border-image-slice: 1;
@@ -106,8 +116,8 @@ p {
 }
 
 #agenda .session:nth-child(odd)::before {
-        left: 100%;
-        margin-left: -20px;
+    left: 100%;
+    margin-left: -20px;
 }
 
 #agenda .session:nth-child(even) {
@@ -159,8 +169,24 @@ p {
     padding: 10px;
 }
 
-#footnote {
+#coach {
+    background-color: #f42272;
     color: #efecfd;
+    padding: 30px 0px;
+    margin: auto;
+    width: 75%;
+}
+
+#coach img {
+    border-radius: 50%;
+    padding-bottom: 30px;
+}
+
+#coach h4 {
+    color: #efecfd;
+}
+
+#footnote {
     margin-top: 30px;
     position: absolute;
     left: 0;
