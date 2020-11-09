@@ -83,12 +83,13 @@ h2 {
 }
 
 .img-center {
-    margin: 0 auto;
+    text-align: center;
+    width: 100%;
 }
 
 #overview h4 {
     padding-top: 10px;
-    text-align: left;
+    text-align: center;
     color: #f42272;
 }
 
@@ -209,7 +210,7 @@ h5 {
 }
 
 #coach {
-    background-color: #f42272;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 130px, #f42272 130px);
     color: #efecfd;
     padding: 30px 20px;
     margin: auto;

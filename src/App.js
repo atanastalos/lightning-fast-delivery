@@ -24,6 +24,8 @@ function App() {
                     <p><a href="#agenda">Agenda</a></p>
                     <p><a href="#coach">Coach</a></p>
                     <p><a href="#get-tickets">Get tickets</a></p>
+                    <p><a href="#contact">Contact</a></p>
+                    {/*<p><a href="/coc">CoC</a></p>*/}
                 </div>
             </div>
 
@@ -44,18 +46,24 @@ function App() {
 
                     <Row>
                         <Col md={4}>
-                            <img src={brain} className="img-center"/>
+                            <div className="img-center">
+                                <img src={brain}/>
+                            </div>
                             <h4>Practical knowledge</h4>
                             <p>Don’t read yet another book on the subject, get the “muscle memory” with experience of
                                 teamwork</p>
                         </Col>
                         <Col md={4}>
-                            <img src={dev} className="img-center"/>
+                            <div className="img-center">
+                                <img src={dev}/>
+                            </div>
                             <h4>Learn while having fun</h4>
                             <p>Play is the highest level form of learning</p>
                         </Col>
                         <Col md={4}>
-                            <img src={gears} className="img-center"/>
+                            <div className="img-center">
+                                <img src={gears}/>
+                            </div>
                             <h4>Get to know other craftsman</h4>
                             <p>This isn’t a lame networking event where you swap cards then never talk again, here you
                                 get to know each other on a deeper level while working</p>
@@ -117,7 +125,9 @@ function App() {
 
                         <Col md={7}>
                             <div className="float-md-right" id="coach">
-                                <img src={profil}/>
+                                <div className="img-center">
+                                    <img src={profil}/>
+                                </div>
                                 <h4>Your coach for the day:</h4>
                                 <p>Ivett Ördög is a lead developer and an experienced dev coach who has worked at
                                     several
@@ -187,12 +197,15 @@ function App() {
                 <div style={{height: 500}}></div>
             </Parallax>
 
+            <div id="contact">
+                <h1>Contact form</h1>
+            </div>
+
             <div id="footnote">
                 <p>Icons are from <a href="https://www.flaticon.com/"><img src={flaticon}/></a></p>
             </div>
         </>
-    )
-        ;
+    );
 }
 
 export default App;
