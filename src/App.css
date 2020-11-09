@@ -38,10 +38,9 @@ h2 {
 .menu .title {
     top: 50%;
     position: absolute;
-    top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    /*transform: translateY(-50%);*/
     transform: rotate(270deg);
     left: -10px;
     font-weight: 800;
@@ -84,10 +83,27 @@ h2 {
     color: #efecfd;
 }
 
+.col-md-4 img {
+    margin: auto;
+}
+
 #overview h4 {
     padding-top: 10px;
     text-align: left;
     color: #f42272;
+}
+
+h5 {
+    margin: 30px 0px 30px 0px;
+    padding: 10px;
+    background-color: #f42272;
+    color: #efecfd;
+    display: inline-flex;
+    font-weight: normal;
+}
+
+.info {
+    padding-top: 30px;
 }
 
 #agenda {
@@ -101,9 +117,9 @@ h2 {
 
 #agenda .session {
     border-top: 3px solid;
-    border-image: linear-gradient(to right, #efecfd 0%, #f42272 100%);
-    border-image-slice: 1;
-    border-width: 3px;
+    border-image: linear-gradient(to right, #efecfd 0%, #f42272 100%) 1;
+    /*border-image-slice: 1;*/
+    /*border-width: 3px;*/
     margin: 0;
     padding: 40px;
     counter-increment: section;
@@ -172,18 +188,22 @@ h2 {
 #coach {
     background-color: #f42272;
     color: #efecfd;
-    padding: 30px 0px;
+    padding: 30px 20px;
     margin: auto;
     width: 75%;
 }
 
 #coach img {
     border-radius: 50%;
-    padding-bottom: 30px;
 }
 
 #coach h4 {
+    padding-top: 20px;
     color: #efecfd;
+}
+
+#coach p {
+    text-align: justify;
 }
 
 #footnote {
