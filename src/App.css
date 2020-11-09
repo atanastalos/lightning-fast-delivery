@@ -40,7 +40,6 @@ h2 {
     position: absolute;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-    /*transform: translateY(-50%);*/
     transform: rotate(270deg);
     left: -10px;
     font-weight: 800;
@@ -74,7 +73,7 @@ h2 {
 }
 
 .row {
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 }
 
 #overview {
@@ -83,8 +82,8 @@ h2 {
     color: #efecfd;
 }
 
-.col-md-4 img {
-    margin: auto;
+.img-center {
+    margin: 0 auto;
 }
 
 #overview h4 {
@@ -100,6 +99,32 @@ h5 {
     color: #efecfd;
     display: inline-flex;
     font-weight: normal;
+}
+
+.dates {
+    margin: auto;
+    padding: 10px;
+    background-color: #f42272;
+    color: #efecfd;
+    display: inline-flex;
+    font-weight: normal;
+}
+
+.dates h6 {
+    padding-right: 20px;
+    margin: auto;
+}
+
+.btn {
+    padding: 20px;
+    background-color: #0b032d;
+    color: #efecfd;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #efecfd;
+    color: #0b032d;
 }
 
 .info {
@@ -118,8 +143,6 @@ h5 {
 #agenda .session {
     border-top: 3px solid;
     border-image: linear-gradient(to right, #efecfd 0%, #f42272 100%) 1;
-    /*border-image-slice: 1;*/
-    /*border-width: 3px;*/
     margin: 0;
     padding: 40px;
     counter-increment: section;
@@ -208,10 +231,7 @@ h5 {
 
 #footnote {
     margin-top: 30px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    flex-shrink: 0;
 }
 
 #footnote p {

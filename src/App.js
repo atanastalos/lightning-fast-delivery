@@ -1,16 +1,17 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import {Container, Row, Col} from 'react-bootstrap';
+import {Container, Row, Col, Button} from 'react-bootstrap';
 import {Parallax} from 'react-parallax';
 
 import logo from './static/logo.png';
 import flaticon from './static/flaticons/flaticon-logo.png';
 import brain from './static/flaticons/brain.png';
-import dev from './static/flaticons/development.png';
-import puzzle from './static/flaticons/puzzle.png';
+import dev from './static/flaticons/project-management.png';
+import gears from './static/flaticons/gears.png';
 import profil from './static/profil.JPG';
 import event3 from './static/events/event3.jpg';
+import event5 from './static/events/event5.jpg';
 import event2 from './static/events/event2.jpg';
 
 function App() {
@@ -43,22 +44,29 @@ function App() {
 
                     <Row>
                         <Col md={4}>
-                            <img src={brain}/>
+                            <img src={brain} className="img-center"/>
                             <h4>Practical knowledge</h4>
                             <p>Don’t read yet another book on the subject, get the “muscle memory” with experience of
                                 teamwork</p>
                         </Col>
                         <Col md={4}>
-                            <img src={dev}/>
+                            <img src={dev} className="img-center"/>
                             <h4>Learn while having fun</h4>
                             <p>Play is the highest level form of learning</p>
                         </Col>
                         <Col md={4}>
-                            <img src={puzzle}/>
+                            <img src={gears} className="img-center"/>
                             <h4>Get to know other craftsman</h4>
                             <p>This isn’t a lame networking event where you swap cards then never talk again, here you
                                 get to know each other on a deeper level while working</p>
                         </Col>
+                    </Row>
+
+                    <Row>
+                        <div className="dates">
+                            <h6>Date of next conference</h6>
+                            <Button href="#get-tickets">Get tickets</Button>
+                        </div>
                     </Row>
                 </Container>
             </div>
@@ -66,10 +74,6 @@ function App() {
             <Parallax bgImage={event3} strength={500}>
                 <div style={{height: 500}}></div>
             </Parallax>
-
-            <div id="get-tickets">
-
-            </div>
 
             <div className="info">
                 <Container>
@@ -169,6 +173,14 @@ function App() {
                         </Col>
                     </Row>
                 </Container>
+            </div>
+
+            <Parallax bgImage={event5} strength={500}>
+                <div style={{height: 500}}></div>
+            </Parallax>
+
+            <div id="get-tickets">
+                <h1>Here you can buy tickets!</h1>
             </div>
 
             <Parallax bgImage={event2} strength={500}>
