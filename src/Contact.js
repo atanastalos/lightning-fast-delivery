@@ -15,7 +15,8 @@ function Contact() {
         setDesign('info');
         setId('info-alert');
 
-        emailjs.sendForm('gmail', 'template_lq7wgyd', e.target, 'user_arXYp4I4EW74lEp92cYT1')
+        console.log("cica");
+        emailjs.sendForm('gmail-ivett', 'template_7zlhd16', e.target, 'user_arXYp4I4EW74lEp92cYT1')
             .then((result) => {
                 setResultOfSendingEmail('Thank you for your email!');
                 setDesign('success');
@@ -38,8 +39,7 @@ function Contact() {
                 {(resultOfSendingEmail) ? tryToSendEmail() : null}
             </div>
             <div className='w-50 mx-auto p-3 mt-2'>
-                <form className="contact-form" onSubmit={sendEmail}>
-                    <Form>
+                    <Form className="contact-form" onSubmit={sendEmail}>
                         <Form.Group controlId="formGroupUsername">
                             <Form.Label>Name</Form.Label>
                             <Form.Control type="text" name="name"/>
@@ -59,7 +59,6 @@ function Contact() {
                         <Button variant="dark" type='submit'
                                 value='Send'>Send</Button>
                     </Form>
-                </form>
             </div>
         </>
     );
