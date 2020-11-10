@@ -230,13 +230,62 @@ h5 {
     text-align: justify;
 }
 
+#coach a {
+    color: #0b032d;
+    text-decoration: none;
+}
+
+#coach a:hover {
+    color: #f3b9c5;
+}
+
+#get-tickets {
+    margin: 30px auto;
+    text-align: center;
+    color: #efecfd;
+}
+
+#get-tickets a {
+    color: #f3b9c5;
+    text-decoration: none;
+}
+
+#get-tickets a:hover {
+    color: #f88cb2;
+}
+
+#coc {
+    border: none;
+    background-color: #f88cb2;
+    padding: 20px;
+    width: 70%;
+    margin: auto;
+    text-align: justify;
+}
+
 #footnote {
     margin-top: 30px;
     flex-shrink: 0;
+}
+
+#footnote img {
+    padding-right: 20px;
 }
 
 #footnote p {
     color: #f3b9c5;
     font-size: 12px;
     padding: 0px 15px;
+}
+
+#footnote .btn {
+    padding: 20px;
+    background-color: #f42272;
+    color: #efecfd;
+    border: none;
+}
+
+#footnote .btn:hover {
+    background-color: #efecfd;
+    color: #0b032d;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import './main.css';
 import {Container, Row, Col, Button} from 'react-bootstrap';
 import {Parallax} from 'react-parallax';
 
@@ -9,12 +9,13 @@ import flaticon from './static/flaticons/flaticon-logo.png';
 import brain from './static/flaticons/brain.png';
 import dev from './static/flaticons/project-management.png';
 import gears from './static/flaticons/gears.png';
+import mail from './static/flaticons/mail.png';
 import profil from './static/profil.JPG';
 import event3 from './static/events/event3.jpg';
 import event5 from './static/events/event5.jpg';
 import event2 from './static/events/event2.jpg';
 
-function App() {
+function HomePage() {
     return (
         <>
             <div className="menu">
@@ -24,8 +25,8 @@ function App() {
                     <p><a href="#agenda">Agenda</a></p>
                     <p><a href="#coach">Coach</a></p>
                     <p><a href="#get-tickets">Get tickets</a></p>
-                    <p><a href="#contact">Contact</a></p>
-                    {/*<p><a href="/coc">CoC</a></p>*/}
+                    <p><a href="/contact" target="_blank">Contact</a></p>
+                    <p><a href="/coc" target="_blank">CoC</a></p>
                 </div>
             </div>
 
@@ -162,7 +163,11 @@ function App() {
                                     continuous delivery and microservice architectures makes her a great fit for helping
                                     you
                                     get better
-                                    at delivering value early and often as the first principle of the Agile manifesto
+                                    at delivering value early and often as the
+                                    <a href="https://agilemanifesto.org/principles.html" target="_blank"> first
+                                        principle </a>
+                                    of the
+                                    <a href="https://agilemanifesto.org/" target="_blank"> Agile manifesto </a>
                                     demands. She is
                                     the perfect opposite of the coach who teaches from the book and believes that a
                                     company's
@@ -191,21 +196,31 @@ function App() {
 
             <div id="get-tickets">
                 <h1>Here you can buy tickets!</h1>
+                <p>By purchasing a ticket you agree to the <a href="/coc" target="_blank">Code of Conduct</a></p>
             </div>
 
             <Parallax bgImage={event2} strength={500}>
                 <div style={{height: 500}}></div>
             </Parallax>
 
-            <div id="contact">
-                <h1>Contact form</h1>
-            </div>
-
             <div id="footnote">
-                <p>Icons are from <a href="https://www.flaticon.com/"><img src={flaticon}/></a></p>
+                <Container>
+                    <Row>
+                        <Col md={8}>
+                            <p>Icons are from <a href="https://www.flaticon.com/" target="_blank"><img src={flaticon}/></a>
+                            </p>
+                            <p>Code of conduct based on <a href="https://confcodeofconduct.com/"
+                                                           target="_blank">confcodeofconduct.com</a></p>
+                        </Col>
+                        <Col md={4}>
+                            <a href="/contact" target="_blank"><img src={mail} /></a>
+                            <Button href="/contact" target="_blank">Contact us!</Button>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         </>
     );
 }
 
-export default App;
+export default HomePage;
