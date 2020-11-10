@@ -5,7 +5,6 @@ import {Container, Row, Col, Button} from 'react-bootstrap';
 import {Parallax} from 'react-parallax';
 
 import logo from './static/logo.png';
-import flaticon from './static/flaticons/flaticon-logo.png';
 import brain from './static/flaticons/brain.png';
 import dev from './static/flaticons/project-management.png';
 import gears from './static/flaticons/gears.png';
@@ -207,7 +206,7 @@ function HomePage() {
                 <Container>
                     <Row>
                         <Col md={8}>
-                            <p>Icons are from <a href="https://www.flaticon.com/" target="_blank"><img src={flaticon}/></a>
+                            <p>Icons are from <a href="https://www.flaticon.com/" target="_blank">flaticon.com</a>
                             </p>
                             <p>Code of conduct based on <a href="https://confcodeofconduct.com/"
                                                            target="_blank">confcodeofconduct.com</a></p>

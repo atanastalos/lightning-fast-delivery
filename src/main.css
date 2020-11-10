@@ -231,12 +231,12 @@ h5 {
 }
 
 #coach a {
-    color: #0b032d;
+    color: #f3b9c5;
     text-decoration: none;
 }
 
 #coach a:hover {
-    color: #f3b9c5;
+    color: #f88cb2;
 }
 
 #get-tickets {
@@ -246,12 +246,12 @@ h5 {
 }
 
 #get-tickets a {
-    color: #f3b9c5;
+    color: #f88cb2;
     text-decoration: none;
 }
 
 #get-tickets a:hover {
-    color: #f88cb2;
+    color: #f42272;
 }
 
 #coc {
@@ -273,9 +273,18 @@ h5 {
 }
 
 #footnote p {
-    color: #f3b9c5;
+    color: #efecfd;
     font-size: 12px;
     padding: 0px 15px;
+}
+
+#footnote a {
+    color: #f88cb2;
+    text-decoration: none;
+}
+
+#footnote a:hover {
+    color: #f42272;
 }
 
 #footnote .btn {
