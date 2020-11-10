@@ -13,15 +13,7 @@ function CoC() {
             </div>
 
             <div id="coc">
-                <h5>The Quick Version</h5>
-                <p>Our conference is dedicated to providing a harassment-free conference experience for everyone,
-                    regardless of gender, gender identity and expression, age, sexual orientation, disability, physical
-                    appearance, body size, race, ethnicity, religion (or lack thereof), or technology choices. We do not
-                    tolerate harassment of conference participants in any form. Sexual language and imagery is not
-                    appropriate for any conference venue, including talks, workshops, parties, Twitter and other online
-                    media. Conference participants violating these rules may be sanctioned or expelled from the
-                    conference without a refund at the discretion of the conference organisers.</p>
-                <h5>The Less Quick Version</h5>
+                <h5>Code of Conduct</h5>
                 <p>Harassment includes offensive verbal comments related to gender, gender identity and expression, age,
                     sexual orientation, disability, physical appearance, body size, race, ethnicity, religion,
                     technology choices, sexual images in public spaces, deliberate intimidation, stalking, following,

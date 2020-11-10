@@ -327,9 +327,15 @@ h5 {
 
 #coc {
     border: none;
-    background-color: #f88cb2;
+    color: #efecfd;
+    background-color: #f42272;
     padding: 0px 30px 30px 30px;
     width: 70%;
     margin: 60px auto;
     text-align: justify;
+}
+
+#coc h5 {
+    background-color: #0b032d;
+    color: #efecfd;
 }
