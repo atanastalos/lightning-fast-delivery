@@ -7,7 +7,7 @@ function CoC() {
             <div className="menu">
                 <div className="title">MENU</div>
                 <div className="nav">
-                    <p><a href="/" target="_blank">Back to Home</a></p>
+                    <p><a href="/" target="_blank">Home</a></p>
                     <p><a href="/contact" target="_blank">Contact</a></p>
                 </div>
             </div>

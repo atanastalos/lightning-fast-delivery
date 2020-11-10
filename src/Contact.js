@@ -37,7 +37,7 @@ function Contact() {
             <div className="menu">
                 <div className="title">MENU</div>
                 <div className="nav">
-                    <p><a href="/" target="_blank">Back to Home</a></p>
+                    <p style={{paddingRight: "20px"}}><a href="/" target="_blank">Home</a></p>
                     <p><a href="/coc" target="_blank">CoC</a></p>
                 </div>
             </div>

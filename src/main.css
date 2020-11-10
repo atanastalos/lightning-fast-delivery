@@ -254,15 +254,6 @@ h5 {
     color: #f42272;
 }
 
-#coc {
-    border: none;
-    background-color: #f88cb2;
-    padding: 20px;
-    width: 70%;
-    margin: auto;
-    text-align: justify;
-}
-
 #footnote {
     margin-top: 30px;
     flex-shrink: 0;
@@ -332,4 +323,13 @@ h5 {
     100% {
         opacity: 0;
     }
+}
+
+#coc {
+    border: none;
+    background-color: #f88cb2;
+    padding: 0px 30px 30px 30px;
+    width: 70%;
+    margin: 60px auto;
+    text-align: justify;
 }
