@@ -298,3 +298,38 @@ h5 {
     background-color: #efecfd;
     color: #0b032d;
 }
+
+.contact-form {
+    background-color: #f42272;
+    padding: 30px;
+    color: #efecfd;
+}
+
+#success-alert {
+    -webkit-animation: cssAnimation 5s forwards;
+    animation: cssAnimation 5s forwards;
+}
+
+@keyframes cssAnimation {
+    0% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes cssAnimation {
+    0% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

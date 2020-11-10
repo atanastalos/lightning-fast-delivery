@@ -15,7 +15,6 @@ function Contact() {
         setDesign('info');
         setId('info-alert');
 
-        console.log("cica");
         emailjs.sendForm('gmail-ivett', 'template_7zlhd16', e.target, 'user_arXYp4I4EW74lEp92cYT1')
             .then((result) => {
                 setResultOfSendingEmail('Thank you for your email!');
@@ -35,6 +34,14 @@ function Contact() {
 
     return (
         <>
+            <div className="menu">
+                <div className="title">MENU</div>
+                <div className="nav">
+                    <p><a href="/" target="_blank">Back to Home</a></p>
+                    <p><a href="/coc" target="_blank">CoC</a></p>
+                </div>
+            </div>
+
             <div className="alert">
                 {(resultOfSendingEmail) ? tryToSendEmail() : null}
             </div>

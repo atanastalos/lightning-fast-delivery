@@ -4,6 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function CoC() {
     return (
         <>
+            <div className="menu">
+                <div className="title">MENU</div>
+                <div className="nav">
+                    <p><a href="/" target="_blank">Back to Home</a></p>
+                    <p><a href="/contact" target="_blank">Contact</a></p>
+                </div>
+            </div>
+
             <div id="coc">
                 <h5>The Quick Version</h5>
                 <p>Our conference is dedicated to providing a harassment-free conference experience for everyone,
