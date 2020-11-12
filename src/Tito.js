@@ -1,4 +1,4 @@
-import useScript from "./useScript";
+import useScript from "./hooks/useScript";
 
 function Tito() {
     useScript('https://js.tito.io/v1');
