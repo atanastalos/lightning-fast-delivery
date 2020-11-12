@@ -4,6 +4,8 @@ import './main.css';
 import {Container, Row, Col, Button} from 'react-bootstrap';
 import {Parallax} from 'react-parallax';
 
+import Tito from './Tito';
+
 import logo from './static/logo.png';
 import brain from './static/flaticons/brain.png';
 import dev from './static/flaticons/project-management.png';
@@ -195,6 +197,7 @@ function HomePage() {
 
             <div id="get-tickets">
                 <h1>Here you can buy tickets!</h1>
+                <Tito/>
                 <p>By purchasing a ticket you agree to the <a href="/coc" target="_blank">Code of Conduct</a></p>
             </div>
 
@@ -212,7 +215,7 @@ function HomePage() {
                                                            target="_blank">confcodeofconduct.com</a></p>
                         </Col>
                         <Col md={4}>
-                            <a href="/contact" target="_blank"><img src={mail} /></a>
+                            <a href="/contact" target="_blank"><img src={mail}/></a>
                             <Button href="/contact" target="_blank">Contact us!</Button>
                         </Col>
                     </Row>

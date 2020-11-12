@@ -254,6 +254,33 @@ h5 {
     color: #f42272;
 }
 
+#get-tickets p {
+    margin-top: 30px;
+}
+
+#tito .tito-ticket-name {
+    color: #f42272;
+}
+
+#tito .tito-ticket-description, .tito-ticket-price, .tito-badge-link, .tito-ticket-quantity {
+    color: #efecfd;
+}
+
+#tito .tito-ticket-vat {
+    color: #f3b9c5;
+}
+
+#tito .tito-submit {
+    background-color: #f42272 !important;
+    color: #efecfd !important;
+    border: none !important;
+}
+
+#tito .tito-submit:hover {
+    background-color: #efecfd !important;
+    color: #0b032d !important;
+}
+
 #footnote {
     margin-top: 30px;
     flex-shrink: 0;
