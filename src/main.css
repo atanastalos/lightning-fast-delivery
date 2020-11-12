@@ -245,6 +245,10 @@ h5 {
     color: #efecfd;
 }
 
+#get-tickets h1 {
+    margin-bottom: 30px;
+}
+
 #get-tickets a {
     color: #f88cb2;
     text-decoration: none;
@@ -256,6 +260,16 @@ h5 {
 
 #get-tickets p {
     margin-top: 30px;
+}
+
+#tito .tito-wrapper {
+    border: 3px solid;
+    border-image: linear-gradient(to right, #efecfd 0%, #f42272 100%) 1;
+}
+
+#tito .tito-ticket.row {
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, #efecfd 0%, #f42272 100%) 1;
 }
 
 #tito .tito-ticket-name {

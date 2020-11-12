@@ -196,7 +196,7 @@ function HomePage() {
             </Parallax>
 
             <div id="get-tickets">
-                <h1>Here you can buy tickets!</h1>
+                <h1>Get your Ticket</h1>
                 <Tito/>
                 <p>By purchasing a ticket you agree to the <a href="/coc" target="_blank">Code of Conduct</a></p>
             </div>
