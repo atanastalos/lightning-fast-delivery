@@ -33,18 +33,30 @@ function HomePage() {
 
             <div id="overview">
                 <Container>
-                    <Row>
-                        <Col md={5}>
-                            <p><img src={logo}/></p>
-                        </Col>
-                        <Col md={7}>
+                    <div className="viewWith2Cols">
+                        <Row>
+                            <Col md={5}>
+                                <p><img src={logo}/></p>
+                            </Col>
+                            <Col md={7}>
+                                <h5>Early and continuous delivery of valuable software</h5>
+                                <p>Software planning and delivery was started out as a year long process, these days the
+                                    environment demands speed from every software team, yet somehow a lot of them are
+                                    stuck
+                                    in the tardiness of the early days. We are here to change that!</p>
+                            </Col>
+                        </Row>
+                    </div>
+                    <div className="viewWith1Col">
+                        <Row>
+                            <img src={logo}/>
                             <h5>Early and continuous delivery of valuable software</h5>
                             <p>Software planning and delivery was started out as a year long process, these days the
                                 environment demands speed from every software team, yet somehow a lot of them are
                                 stuck
                                 in the tardiness of the early days. We are here to change that!</p>
-                        </Col>
-                    </Row>
+                        </Row>
+                    </div>
 
                     <Row>
                         <Col md={4}>
@@ -207,18 +219,32 @@ function HomePage() {
 
             <div id="footnote">
                 <Container>
-                    <Row>
-                        <Col md={8}>
+                    <div className="footnoteNotMobileView">
+                        <Row>
+                            <Col md={8}>
+                                <p>Icons are from <a href="https://www.flaticon.com/" target="_blank">flaticon.com</a>
+                                </p>
+                                <p>Code of conduct based on <a href="https://confcodeofconduct.com/"
+                                                               target="_blank">confcodeofconduct.com</a></p>
+                            </Col>
+                            <Col md={4}>
+                                <a href="/contact" target="_blank"><img src={mail}/></a>
+                                <Button href="/contact" target="_blank">Contact us!</Button>
+                            </Col>
+                        </Row>
+                    </div>
+                    <div className="footnoteMobileView">
+                        <div className="sendEmail">
+                            <a href="/contact" target="_blank"><img src={mail}/></a>
+                            <Button href="/contact" target="_blank">Contact us!</Button>
+                        </div>
+                        <div className="links">
                             <p>Icons are from <a href="https://www.flaticon.com/" target="_blank">flaticon.com</a>
                             </p>
                             <p>Code of conduct based on <a href="https://confcodeofconduct.com/"
                                                            target="_blank">confcodeofconduct.com</a></p>
-                        </Col>
-                        <Col md={4}>
-                            <a href="/contact" target="_blank"><img src={mail}/></a>
-                            <Button href="/contact" target="_blank">Contact us!</Button>
-                        </Col>
-                    </Row>
+                        </div>
+                    </div>
                 </Container>
             </div>
         </>

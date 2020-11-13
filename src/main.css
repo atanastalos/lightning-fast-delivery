@@ -128,13 +128,19 @@ h5 {
     color: #0b032d;
 }
 
+.viewWith1Col img, h5 {
+    margin: 10px auto 20px auto;
+}
+
+.viewWith1Col p {
+    padding: 0px 20px;
+}
+
 .info {
     padding-top: 30px;
 }
 
 #agenda {
-    min-width: 300px;
-    max-width: 500px;
     margin: auto;
     padding: 30px 20px 30px 0px;
     text-align: justify;
@@ -265,6 +271,7 @@ h5 {
 #tito .tito-wrapper {
     border: 3px solid;
     border-image: linear-gradient(to right, #efecfd 0%, #f42272 100%) 1;
+    width: 90%;
 }
 
 #tito .tito-ticket.row {
@@ -380,3 +387,73 @@ h5 {
     background-color: #0b032d;
     color: #efecfd;
 }
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    #overview .viewWith2Cols {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #overview .viewWith1Col {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #footnote .footnoteMobileView {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #overview .viewWith1Col, .react-parallax-content {
+        display: none;
+    }
+
+    .col-md-4 {
+        margin-bottom: 20px;
+    }
+
+    .row {
+        padding-bottom: 30px;
+    }
+
+    .info #agenda {
+        padding-top: 0;
+    }
+
+    #footnote .footnoteNotMobileView {
+        display: none;
+    }
+
+    #footnote {
+        text-align: center;
+    }
+
+    #footnote .footnoteMobileView .sendEmail {
+        margin-bottom: 40px;
+    }
+
+    #footnote .footnoteMobileView p {
+        margin-bottom: 10px;
+    }
+
+    #footnote .footnoteMobileView .links {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 1001px) {
+    .w-50 {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .w-50 {
+        width: 70%;
+    }
+}
+
+
