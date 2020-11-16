@@ -11,7 +11,7 @@ import brain from './static/flaticons/brain.png';
 import dev from './static/flaticons/project-management.png';
 import gears from './static/flaticons/gears.png';
 import mail from './static/flaticons/mail.png';
-import profil from './static/profil.JPG';
+import profil from './static/profil.png';
 import event3 from './static/events/event3.jpg';
 import event5 from './static/events/event5.jpg';
 import event2 from './static/events/event2.jpg';
