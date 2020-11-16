@@ -6,7 +6,7 @@ function Tito() {
     return (
         <>
             <div id="tito">
-                <tito-widget event="demo/exampleconf"></tito-widget>
+                <tito-widget event="wmr/lightning-fast-delivery-december-2020"></tito-widget>
             </div>
         </>
     );

@@ -15,6 +15,10 @@ h2 {
     padding-bottom: 20px;
 }
 
+strong {
+    color: #efecfd;
+}
+
 .menu {
     font-weight: bold;
     background: #f42272;
