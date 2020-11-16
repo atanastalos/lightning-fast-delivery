@@ -72,7 +72,8 @@ function HomePage() {
                                 <img src={dev}/>
                             </div>
                             <h4>Learn while having fun</h4>
-                            <p>Play is the highest level form of learning</p>
+                            <p>Play is the highest level form of learning! Our workshop takes a gamified approach to
+                                provide a first hand experience with industry best practices.</p>
                         </Col>
                         <Col md={4}>
                             <div className="img-center">
