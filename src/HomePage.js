@@ -86,7 +86,7 @@ function HomePage() {
 
                     <Row>
                         <div className="dates">
-                            <h6>Date of next conference</h6>
+                            <h6>11th December 2020 </h6>
                             <Button href="#get-tickets">Get tickets</Button>
                         </div>
                     </Row>
