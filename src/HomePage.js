@@ -23,13 +23,33 @@ function HomePage() {
     // console.log('fetched entries');
     // console.log(entries);
 
-    const Entries = entries.map((entry) => (
-            <div className="entry" key={entry.sys.id}>
-                <h5>{entry.fields.headline}</h5>
-                <p>{entry.fields.longerDescription}</p>
-            </div>
-        )
-    )
+    const OverviewDescription = entries.map((entry) => (
+        <div className="entry" key={entry.sys.id}>
+            <h5>{entry.fields.headline}</h5>
+            <p>{entry.fields.longerDescription}</p>
+        </div>
+    ))
+
+    const OverViewList1 = entries.map((entry) => (
+        <div className="entry" key={entry.sys.id}>
+            <h4>{entry.fields.listTitle1}</h4>
+            <p>{entry.fields.listDescription1}</p>
+        </div>
+    ))
+
+    const OverViewList2 = entries.map((entry) => (
+        <div className="entry" key={entry.sys.id}>
+            <h4>{entry.fields.listTitle2}</h4>
+            <p>{entry.fields.listDescription2}</p>
+        </div>
+    ))
+
+    const OverViewList3 = entries.map((entry) => (
+        <div className="entry" key={entry.sys.id}>
+            <h4>{entry.fields.listTitle3}</h4>
+            <p>{entry.fields.listDescription3}</p>
+        </div>
+    ))
 
     return (
         <>
@@ -53,23 +73,14 @@ function HomePage() {
                                 <p><img src={logo}/></p>
                             </Col>
                             <Col md={7}>
-                                {Entries}
-                                {/*<h5>Early and continuous delivery of valuable software</h5>*/}
-                                {/*<p>Software planning and delivery was started out as a year long process, these days the*/}
-                                {/*    environment demands speed from every software team, yet somehow a lot of them are*/}
-                                {/*    stuck*/}
-                                {/*    in the tardiness of the early days. We are here to change that!</p>*/}
+                                {OverviewDescription}
                             </Col>
                         </Row>
                     </div>
                     <div className="viewWith1Col">
                         <Row>
                             <img src={logo}/>
-                            <h5>Early and continuous delivery of valuable software</h5>
-                            <p>Software planning and delivery was started out as a year long process, these days the
-                                environment demands speed from every software team, yet somehow a lot of them are
-                                stuck
-                                in the tardiness of the early days. We are here to change that!</p>
+                            {OverviewDescription}
                         </Row>
                     </div>
 
@@ -78,25 +89,19 @@ function HomePage() {
                             <div className="img-center">
                                 <img src={brain}/>
                             </div>
-                            <h4>Practical knowledge</h4>
-                            <p>Don’t read yet another book on the subject, get the “muscle memory” with experience of
-                                teamwork</p>
+                            {OverViewList1}
                         </Col>
                         <Col md={4}>
                             <div className="img-center">
                                 <img src={dev}/>
                             </div>
-                            <h4>Learn while having fun</h4>
-                            <p>Play is the highest level form of learning! Our workshop takes a gamified approach to
-                                provide a first hand experience with industry best practices.</p>
+                            {OverViewList2}
                         </Col>
                         <Col md={4}>
                             <div className="img-center">
                                 <img src={gears}/>
                             </div>
-                            <h4>Get to know other craftsman</h4>
-                            <p>This isn’t a lame networking event where you swap cards then never talk again, here you
-                                get to know each other on a deeper level while working</p>
+                            {OverViewList3}
                         </Col>
                     </Row>
 
@@ -134,7 +139,8 @@ function HomePage() {
                                     </div>
                                 </div>
                                 <div className="session">
-                                    <p>12:50am - Lightning talk: The 3 stages of product maturity and why that matters
+                                    <p>12:50am - Lightning talk: The 3 stages of product maturity and why that
+                                        matters
                                         to
                                         you</p>
                                     <p>1:00pm - Coding time</p>
@@ -162,34 +168,43 @@ function HomePage() {
                                 <p>Ivett Ördög is a lead developer and an experienced dev coach who has worked at
                                     several
                                     industry
-                                    leading companies. She combines her developer and leadership skills with a mindful
+                                    leading companies. She combines her developer and leadership skills with a
+                                    mindful
                                     and
                                     critical
                                     approach to people and is an active participant in meetups, conferences, and the
                                     developer community
-                                    in general. She has taught university courses and is an occasional blog author. She
+                                    in general. She has taught university courses and is an occasional blog author.
+                                    She
                                     is
                                     also the
                                     creator of the Morning Commute YouTube channel.</p>
-                                <p>During her tenure at Emarsys (acquired by SAP) the company has grown from having a
+                                <p>During her tenure at Emarsys (acquired by SAP) the company has grown from having
+                                    a
                                     dozen
                                     developers
-                                    on staff into an engineering organization with over 200 people on payroll. Ivett has
+                                    on staff into an engineering organization with over 200 people on payroll. Ivett
+                                    has
                                     successfully
                                     managed teams during this period. A significant part of the organisation was on
                                     boarded
                                     by her as
-                                    the leader of the company's bootcamp initiative. She also led the team that was the
+                                    the leader of the company's bootcamp initiative. She also led the team that was
+                                    the
                                     first to
-                                    implement a continuous delivery approach and she was a strong proponent of using the
+                                    implement a continuous delivery approach and she was a strong proponent of using
+                                    the
                                     Saga pattern
-                                    that solved the resiliency issues that arose as the company moved from a monolithic
+                                    that solved the resiliency issues that arose as the company moved from a
+                                    monolithic
                                     architecture to
                                     a microservice architecture.</p>
-                                <p>The unique combination of coaching, coding and leadership as well as her experience
+                                <p>The unique combination of coaching, coding and leadership as well as her
+                                    experience
                                     with
                                     introducing
-                                    continuous delivery and microservice architectures makes her a great fit for helping
+                                    continuous delivery and microservice architectures makes her a great fit for
+                                    helping
                                     you
                                     get better
                                     at delivering value early and often as the
@@ -203,13 +218,16 @@ function HomePage() {
                                     engineering culture is the key to its success: instead of following a so called
                                     “agile
                                     framework” or
-                                    hiring “devops” engineers and putting them in a separate silo building a culture of
+                                    hiring “devops” engineers and putting them in a separate silo building a culture
+                                    of
                                     continuous
-                                    improvement, short and incremental iterations and rigorously following a scientific
+                                    improvement, short and incremental iterations and rigorously following a
+                                    scientific
                                     approach to
                                     problem solving is what makes a successful engineering organization. She lives,
                                     practices, and
-                                    teaches agile, lean, and continuous deployment and she's more than happy to share
+                                    teaches agile, lean, and continuous deployment and she's more than happy to
+                                    share
                                     her
                                     knowledge and
                                     comments with you.</p>
@@ -238,7 +256,8 @@ function HomePage() {
                     <div className="footnoteNotMobileView">
                         <Row>
                             <Col md={8}>
-                                <p>Icons are from <a href="https://www.flaticon.com/" target="_blank">flaticon.com</a>
+                                <p>Icons are from <a href="https://www.flaticon.com/"
+                                                     target="_blank">flaticon.com</a>
                                 </p>
                                 <p>Code of conduct based on <a href="https://confcodeofconduct.com/"
                                                                target="_blank">confcodeofconduct.com</a></p>
