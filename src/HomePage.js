@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './main.css';
 import {Container, Row, Col, Button} from 'react-bootstrap';
@@ -15,8 +15,22 @@ import profil from './static/profil.png';
 import event3 from './static/events/event3.jpg';
 import event5 from './static/events/event5.jpg';
 import event2 from './static/events/event2.jpg';
+import useEntries from "./hooks/useEntries";
 
 function HomePage() {
+
+    const entries = useEntries('overview');
+    // console.log('fetched entries');
+    // console.log(entries);
+
+    const Entries = entries.map((entry) => (
+            <div className="entry" key={entry.sys.id}>
+                <h5>{entry.fields.headline}</h5>
+                <p>{entry.fields.longerDescription}</p>
+            </div>
+        )
+    )
+
     return (
         <>
             <div className="menu">
@@ -39,11 +53,12 @@ function HomePage() {
                                 <p><img src={logo}/></p>
                             </Col>
                             <Col md={7}>
-                                <h5>Early and continuous delivery of valuable software</h5>
-                                <p>Software planning and delivery was started out as a year long process, these days the
-                                    environment demands speed from every software team, yet somehow a lot of them are
-                                    stuck
-                                    in the tardiness of the early days. We are here to change that!</p>
+                                {Entries}
+                                {/*<h5>Early and continuous delivery of valuable software</h5>*/}
+                                {/*<p>Software planning and delivery was started out as a year long process, these days the*/}
+                                {/*    environment demands speed from every software team, yet somehow a lot of them are*/}
+                                {/*    stuck*/}
+                                {/*    in the tardiness of the early days. We are here to change that!</p>*/}
                             </Col>
                         </Row>
                     </div>
