@@ -1,10 +1,15 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './main.css';
 import {Container, Row, Col, Button} from 'react-bootstrap';
 import {Parallax} from 'react-parallax';
 
 import Tito from './Tito';
+
+import useEntries from './hooks/useEntries';
+import Overview from './Overview';
+import Agenda from './Agenda';
+import Coach from './Coach';
 
 import logo from './static/logo.png';
 import brain from './static/flaticons/brain.png';
@@ -15,39 +20,18 @@ import profil from './static/profil.png';
 import event3 from './static/events/event3.jpg';
 import event5 from './static/events/event5.jpg';
 import event2 from './static/events/event2.jpg';
-import useEntries from "./hooks/useEntries";
 
 function HomePage() {
 
-    const entries = useEntries('overview');
-    // console.log('fetched entries');
-    // console.log(entries);
+    const overview = Overview();
+    const agenda = Agenda();
+    const coach = Coach();
 
-    const OverviewDescription = entries.map((entry) => (
-        <div className="entry" key={entry.sys.id}>
-            <h5>{entry.fields.headline}</h5>
-            <p>{entry.fields.longerDescription}</p>
-        </div>
-    ))
+    const entries = useEntries('dateOfNextWorkshop');
 
-    const OverViewList1 = entries.map((entry) => (
+    const date = entries.map((entry) => (
         <div className="entry" key={entry.sys.id}>
-            <h4>{entry.fields.listTitle1}</h4>
-            <p>{entry.fields.listDescription1}</p>
-        </div>
-    ))
-
-    const OverViewList2 = entries.map((entry) => (
-        <div className="entry" key={entry.sys.id}>
-            <h4>{entry.fields.listTitle2}</h4>
-            <p>{entry.fields.listDescription2}</p>
-        </div>
-    ))
-
-    const OverViewList3 = entries.map((entry) => (
-        <div className="entry" key={entry.sys.id}>
-            <h4>{entry.fields.listTitle3}</h4>
-            <p>{entry.fields.listDescription3}</p>
+            <h6>{entry.fields.dateOfNextWorkshop}</h6>
         </div>
     ))
 
@@ -73,14 +57,14 @@ function HomePage() {
                                 <p><img src={logo}/></p>
                             </Col>
                             <Col md={7}>
-                                {OverviewDescription}
+                                {overview[0]}
                             </Col>
                         </Row>
                     </div>
                     <div className="viewWith1Col">
                         <Row>
                             <img src={logo}/>
-                            {OverviewDescription}
+                            {overview[0]}
                         </Row>
                     </div>
 
@@ -89,25 +73,25 @@ function HomePage() {
                             <div className="img-center">
                                 <img src={brain}/>
                             </div>
-                            {OverViewList1}
+                            {overview[1]}
                         </Col>
                         <Col md={4}>
                             <div className="img-center">
                                 <img src={dev}/>
                             </div>
-                            {OverViewList2}
+                            {overview[2]}
                         </Col>
                         <Col md={4}>
                             <div className="img-center">
                                 <img src={gears}/>
                             </div>
-                            {OverViewList3}
+                            {overview[3]}
                         </Col>
                     </Row>
 
                     <Row>
                         <div className="dates">
-                            <h6>11th December 2020 </h6>
+                            {date}
                             <Button href="#get-tickets">Get tickets</Button>
                         </div>
                     </Row>
@@ -125,9 +109,10 @@ function HomePage() {
                             <div id="agenda">
                                 <h2>Agenda</h2>
                                 <div className="session">
-                                    <p>8:30am - Introduction</p>
-                                    <p>9:00am - Coding time</p>
-                                    <p>10:00am - Retrospective and break</p>
+                                    {/*<p>8:30am - Introduction</p>*/}
+                                    {/*<p>9:00am - Coding time</p>*/}
+                                    {/*<p>10:00am - Retrospective and break</p>*/}
+                                    {agenda[0]}
                                 </div>
                                 <div className="session">
                                     <p>10:30am - Lightning talk: Maximizing value by achieving clarity</p>
@@ -164,73 +149,7 @@ function HomePage() {
                                 <div className="img-center">
                                     <img src={profil}/>
                                 </div>
-                                <h4>Your coach for the day:</h4>
-                                <p>Ivett Ördög is a lead developer and an experienced dev coach who has worked at
-                                    several
-                                    industry
-                                    leading companies. She combines her developer and leadership skills with a
-                                    mindful
-                                    and
-                                    critical
-                                    approach to people and is an active participant in meetups, conferences, and the
-                                    developer community
-                                    in general. She has taught university courses and is an occasional blog author.
-                                    She
-                                    is
-                                    also the
-                                    creator of the Morning Commute YouTube channel.</p>
-                                <p>During her tenure at Emarsys (acquired by SAP) the company has grown from having
-                                    a
-                                    dozen
-                                    developers
-                                    on staff into an engineering organization with over 200 people on payroll. Ivett
-                                    has
-                                    successfully
-                                    managed teams during this period. A significant part of the organisation was on
-                                    boarded
-                                    by her as
-                                    the leader of the company's bootcamp initiative. She also led the team that was
-                                    the
-                                    first to
-                                    implement a continuous delivery approach and she was a strong proponent of using
-                                    the
-                                    Saga pattern
-                                    that solved the resiliency issues that arose as the company moved from a
-                                    monolithic
-                                    architecture to
-                                    a microservice architecture.</p>
-                                <p>The unique combination of coaching, coding and leadership as well as her
-                                    experience
-                                    with
-                                    introducing
-                                    continuous delivery and microservice architectures makes her a great fit for
-                                    helping
-                                    you
-                                    get better
-                                    at delivering value early and often as the
-                                    <a href="https://agilemanifesto.org/principles.html" target="_blank"> first
-                                        principle </a>
-                                    of the
-                                    <a href="https://agilemanifesto.org/" target="_blank"> Agile manifesto </a>
-                                    demands. She is
-                                    the perfect opposite of the coach who teaches from the book and believes that a
-                                    company's
-                                    engineering culture is the key to its success: instead of following a so called
-                                    “agile
-                                    framework” or
-                                    hiring “devops” engineers and putting them in a separate silo building a culture
-                                    of
-                                    continuous
-                                    improvement, short and incremental iterations and rigorously following a
-                                    scientific
-                                    approach to
-                                    problem solving is what makes a successful engineering organization. She lives,
-                                    practices, and
-                                    teaches agile, lean, and continuous deployment and she's more than happy to
-                                    share
-                                    her
-                                    knowledge and
-                                    comments with you.</p>
+                                {coach}
                             </div>
                         </Col>
                     </Row>
