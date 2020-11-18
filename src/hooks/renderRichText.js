@@ -9,9 +9,9 @@ export default function renderRichText(content) {
                     if (item.marks.length) {
                         switch (item.marks[0].type) {
                             case "italic":
-                                return (<i>{item.value}</i>);
+                                return (<i key={index}>{item.value}</i>);
                             case "bold":
-                                return (<b>{item.value}</b>);
+                                return (<b key={index}>{item.value}</b>);
                         }
                     } else {
                         return item.value;
