@@ -1,10 +1,8 @@
 import React from 'react';
-import useEntries from "./hooks/useEntries";
+import useEntries from './hooks/useEntries';
 
 function Overview() {
     const entries = useEntries('overview');
-// console.log('fetched entries');
-// console.log(entries);
 
     const overviewDescription = entries.map((entry) => (
         <div className="entry" key={entry.sys.id}>

@@ -1,13 +1,17 @@
+import React from 'react';
 import useScript from "./hooks/useScript";
 import useEntries from "./hooks/useEntries";
-import React from "react";
 
 function Tito() {
     useScript('https://js.tito.io/v1');
 
     const entries = useEntries('titoWidget');
+    console.log("TITO");
+    console.log(entries);
 
-    const Entries = entries.map((entry) => (
+    if(!entries) {return null;}
+
+    const nameOfEvent = entries.map((entry) => (
         <div className="entry" key={entry.sys.id}>
             <tito-widget event={entry.fields.name}></tito-widget>
         </div>
@@ -17,7 +21,7 @@ function Tito() {
     return (
         <>
             <div id="tito">
-                {Entries}
+                {nameOfEvent}
             </div>
         </>
     );

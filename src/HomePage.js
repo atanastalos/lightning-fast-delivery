@@ -24,7 +24,7 @@ import event2 from './static/events/event2.jpg';
 function HomePage() {
 
     const overview = Overview();
-    const agenda = Agenda();
+    const [session1, session2, lunch, extraInformation, session3, session4, session5] = Agenda();
     const coach = Coach();
 
     const entries = useEntries('dateOfNextWorkshop');
@@ -109,37 +109,23 @@ function HomePage() {
                             <div id="agenda">
                                 <h2>Agenda</h2>
                                 <div className="session">
-                                    {/*<p>8:30am - Introduction</p>*/}
-                                    {/*<p>9:00am - Coding time</p>*/}
-                                    {/*<p>10:00am - Retrospective and break</p>*/}
-                                    {agenda[0]}
+                                    {session1}
                                 </div>
                                 <div className="session">
-                                    <p>10:30am - Lightning talk: Maximizing value by achieving clarity</p>
-                                    <p>10:40am - Coding time</p>
-                                    <p>11:40am - Retrospective</p>
+                                    {session2}
                                     <div className="extra">
-                                        <p>12:00am - Lunch and networking time</p>
-                                        <span class="extratext">During lunch time you will be paired with other participants to talk to while you are eating your lunch.</span>
+                                        {lunch}
+                                        {extraInformation}
                                     </div>
                                 </div>
                                 <div className="session">
-                                    <p>12:50am - Lightning talk: The 3 stages of product maturity and why that
-                                        matters
-                                        to
-                                        you</p>
-                                    <p>1:00pm - Coding time</p>
-                                    <p>2:00pm - Retrospective and break</p>
-                                    <p>2:30pm - Lightning talk: Strategies for mitigating deployment risk</p>
-                                    <p>2:40pm - Coding time</p>
-                                    <p>3:30pm - Retrospective and break</p>
+                                    {session3}
                                 </div>
                                 <div className="session">
-                                    <p>4:00pm - Lightning talk: Build for resilience</p>
-                                    <p>4:10pm - Coding time</p>
-                                    <p>5:00pm - Retrospective</p>
-                                    <p>5:30pm - Closing circle - Takeaways</p>
-                                    <p>6:00pm - Wrap up</p>
+                                    {session4}
+                                </div>
+                                <div className="session">
+                                    {session5}
                                 </div>
                             </div>
                         </Col>
