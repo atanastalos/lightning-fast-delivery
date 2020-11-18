@@ -5,6 +5,9 @@ import renderRichText from './hooks/renderRichText';
 function Agenda() {
     const entries = useEntries('agenda');
 
+    console.log('agenda');
+    console.log(entries);
+
     const session1 = entries.map((entry) => (
         <div className="entry" key={entry.sys.id}>
             {renderRichText(entry.fields.session1.content)}

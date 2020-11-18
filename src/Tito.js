@@ -6,8 +6,6 @@ function Tito() {
     useScript('https://js.tito.io/v1');
 
     const entries = useEntries('titoWidget');
-    console.log("TITO");
-    console.log(entries);
 
     if(!entries) {return null;}
 
