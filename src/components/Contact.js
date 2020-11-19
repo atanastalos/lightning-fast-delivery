@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import config from '../config';
 import emailjs from 'emailjs-com';
 import {Alert, Button, Form} from 'react-bootstrap'
 

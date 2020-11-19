@@ -1,5 +1,4 @@
 import {useEffect, useState} from 'react';
-import config from '../config';
 import * as Contentful from 'contentful';
 
 const useEntries = contentType => {
