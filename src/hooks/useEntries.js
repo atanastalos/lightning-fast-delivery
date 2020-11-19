@@ -6,8 +6,8 @@ const useEntries = contentType => {
     const [entries, setEntries] = useState([]);
 
     const client = Contentful.createClient({
-        space: config.contentfulSpace,
-        accessToken: config.contentfulAccessToken
+        space: process.env.REACT_APP_CONTENTFUL_SPACE_ID,
+        accessToken: process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN
     });
 
     useEffect(() => {

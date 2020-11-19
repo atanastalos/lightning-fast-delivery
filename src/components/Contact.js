@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-// import config from '../config';
+import config from '../config';
 import emailjs from 'emailjs-com';
 import {Alert, Button, Form} from 'react-bootstrap'
 
@@ -15,7 +15,8 @@ function Contact() {
         setDesign('info');
         setId('info-alert');
 
-        emailjs.sendForm(process.env.emailjsServiceId, process.env.emailjsTemplateId, e.target, process.env.emailjsUserId)
+        emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+            e.target, process.env.REACT_APP_EMAILJS_USER_ID)
             .then((result) => {
                 setResultOfSendingEmail('Thank you for your email!');
                 setDesign('success');
@@ -46,26 +47,26 @@ function Contact() {
                 {(resultOfSendingEmail) ? tryToSendEmail() : null}
             </div>
             <div className='w-50 mx-auto p-3 mt-2'>
-                    <Form className="contact-form" onSubmit={sendEmail}>
-                        <Form.Group controlId="formGroupUsername">
-                            <Form.Label>Name</Form.Label>
-                            <Form.Control type="text" name="name"/>
-                        </Form.Group>
-                        <Form.Group controlId="formGroupEmail">
-                            <Form.Label>Email address</Form.Label>
-                            <Form.Control type="email" name='email'/>
-                        </Form.Group>
-                        <Form.Group controlId="subject">
-                            <Form.Label>Subject</Form.Label>
-                            <Form.Control type="subject" name='subject'/>
-                        </Form.Group>
-                        <Form.Group controlId="textarea">
-                            <Form.Label>Message</Form.Label>
-                            <Form.Control as="textarea" rows="10" name='message'/>
-                        </Form.Group>
-                        <Button variant="dark" type='submit'
-                                value='Send'>Send</Button>
-                    </Form>
+                <Form className="contact-form" onSubmit={sendEmail}>
+                    <Form.Group controlId="formGroupUsername">
+                        <Form.Label>Name</Form.Label>
+                        <Form.Control type="text" name="name"/>
+                    </Form.Group>
+                    <Form.Group controlId="formGroupEmail">
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control type="email" name='email'/>
+                    </Form.Group>
+                    <Form.Group controlId="subject">
+                        <Form.Label>Subject</Form.Label>
+                        <Form.Control type="subject" name='subject'/>
+                    </Form.Group>
+                    <Form.Group controlId="textarea">
+                        <Form.Label>Message</Form.Label>
+                        <Form.Control as="textarea" rows="10" name='message'/>
+                    </Form.Group>
+                    <Button variant="dark" type='submit'
+                            value='Send'>Send</Button>
+                </Form>
             </div>
         </>
     );

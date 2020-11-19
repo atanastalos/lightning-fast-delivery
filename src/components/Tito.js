@@ -1,5 +1,5 @@
 import React from 'react';
-import config from '../config';
+// import config from '../config';
 import useScript from "../hooks/useScript";
 
 function Tito() {
@@ -8,7 +8,7 @@ function Tito() {
     return (
         <>
             <div id="tito">
-                <tito-widget event={config.titoEvent}></tito-widget>
+                <tito-widget event={process.env.REACT_APP_TITO_EVENT}></tito-widget>
             </div>
         </>
     );
