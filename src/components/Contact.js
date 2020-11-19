@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import {Alert, Button, Form} from 'react-bootstrap'
+import config from '../config';
 import emailjs from 'emailjs-com';
+import {Alert, Button, Form} from 'react-bootstrap'
 
 function Contact() {
 
@@ -14,7 +15,7 @@ function Contact() {
         setDesign('info');
         setId('info-alert');
 
-        emailjs.sendForm('gmail-ivett', 'template_7zlhd16', e.target, 'user_arXYp4I4EW74lEp92cYT1')
+        emailjs.sendForm(config.emailjsServiceId, config.emailjsTemplateId, e.target, config.emailjsUserId)
             .then((result) => {
                 setResultOfSendingEmail('Thank you for your email!');
                 setDesign('success');

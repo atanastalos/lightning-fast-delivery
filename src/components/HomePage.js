@@ -1,25 +1,25 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './main.css';
+import '../main.css';
 import {Container, Row, Col, Button} from 'react-bootstrap';
 import {Parallax} from 'react-parallax';
 
 import Tito from './Tito';
 
-import useEntries from './hooks/useEntries';
+import useEntries from '../hooks/useEntries';
 import Overview from './Overview';
 import Agenda from './Agenda';
 import Coach from './Coach';
 
-import logo from './static/logo.png';
-import brain from './static/flaticons/brain.png';
-import dev from './static/flaticons/project-management.png';
-import gears from './static/flaticons/gears.png';
-import mail from './static/flaticons/mail.png';
-import profil from './static/profil.png';
-import event3 from './static/events/event3.jpg';
-import event5 from './static/events/event5.jpg';
-import event2 from './static/events/event2.jpg';
+import logo from '../static/logo.png';
+import brain from '../static/flaticons/brain.png';
+import dev from '../static/flaticons/project-management.png';
+import gears from '../static/flaticons/gears.png';
+import mail from '../static/flaticons/mail.png';
+import profil from '../static/profil.png';
+import event3 from '../static/events/event3.jpg';
+import event5 from '../static/events/event5.jpg';
+import event2 from '../static/events/event2.jpg';
 
 function HomePage() {
 

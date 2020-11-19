@@ -1,5 +1,5 @@
 import React from 'react';
-import useEntries from './hooks/useEntries';
+import useEntries from '../hooks/useEntries';
 
 function Overview() {
     const entries = useEntries('overview');

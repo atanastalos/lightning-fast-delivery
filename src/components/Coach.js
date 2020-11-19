@@ -1,6 +1,6 @@
 import React from 'react';
-import useEntries from './hooks/useEntries';
-import renderRichText from './hooks/renderRichText';
+import useEntries from '../hooks/useEntries';
+import renderRichText from '../hooks/renderRichText';
 
 function Coach() {
     const entries = useEntries('coach');

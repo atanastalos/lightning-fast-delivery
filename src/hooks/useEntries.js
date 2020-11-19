@@ -1,12 +1,13 @@
 import {useEffect, useState} from 'react';
+import config from '../config';
 import * as Contentful from 'contentful';
 
 const useEntries = contentType => {
     const [entries, setEntries] = useState([]);
 
     const client = Contentful.createClient({
-        space: '9q21wi6ct9s3',
-        accessToken: 'TgJgiOHNp2UAZC4NGWWbCfJSwY8Z-9N65-87qeI6Bvc'
+        space: config.contentfulSpace,
+        accessToken: config.contentfulAccessToken
     });
 
     useEffect(() => {
