@@ -47,7 +47,6 @@ function Agenda() {
         </div>
     ))
 
-
     return [session1, session2, lunch, extraInformation, session3, session4, session5];
 }
 
