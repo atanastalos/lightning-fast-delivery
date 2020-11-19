@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import config from '../config';
+// import config from '../config';
 import emailjs from 'emailjs-com';
 import {Alert, Button, Form} from 'react-bootstrap'
 
@@ -15,7 +15,7 @@ function Contact() {
         setDesign('info');
         setId('info-alert');
 
-        emailjs.sendForm(config.emailjsServiceId, config.emailjsTemplateId, e.target, config.emailjsUserId)
+        emailjs.sendForm(process.env.emailjsServiceId, process.env.emailjsTemplateId, e.target, process.env.emailjsUserId)
             .then((result) => {
                 setResultOfSendingEmail('Thank you for your email!');
                 setDesign('success');
