@@ -387,14 +387,15 @@ h5 {
 #coc {
     border: none;
     color: #efecfd;
-    background-color: #f42272;
-    padding: 0px 30px 30px 30px;
-    width: 70%;
-    margin: 60px auto;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60px, #f42272 60px);
+    padding: 0px 15px 30px 15px;
+    width: 80%;
+    margin: auto;
     text-align: justify;
 }
 
 #coc h5 {
+    margin-top: 90px;
     background-color: #0b032d;
     color: #efecfd;
 }
@@ -480,12 +481,15 @@ h5 {
 }
 
 @media screen and (max-width: 425px) {
-    body {
-        padding-right: 0;
-    }
-
     #overview .col-md-5 img {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 326px) {
+    #coc h5 {
+        text-align: left;
+        padding: 5px;
     }
 }
 
