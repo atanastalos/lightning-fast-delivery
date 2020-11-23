@@ -3,7 +3,6 @@ body {
     background-image: url("./static/overview-bg.png");
     background-size: 2000px;
     background-repeat: no-repeat;
-    padding-right: 40px;
 }
 
 p {
@@ -52,7 +51,7 @@ strong {
 }
 
 .menu .nav {
-    position: absolute;
+    position: fixed;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -425,6 +424,10 @@ h5 {
 @media screen and (max-width: 767px) {
     #overview .viewWith1Col, .react-parallax-content {
         display: none;
+    }
+
+    body {
+        padding-right: 40px;
     }
 
     #overview .viewWith2Cols {
