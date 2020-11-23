@@ -5,6 +5,12 @@ import renderRichText from '../hooks/renderRichText';
 function Agenda() {
     const entries = useEntries('agenda');
 
+    const comment = entries.map((entry) => (
+        <div className="entry" key={entry.sys.id}>
+            {renderRichText(entry.fields.comment.content)}
+        </div>
+    ))
+
     const session1 = entries.map((entry) => (
         <div className="entry" key={entry.sys.id}>
             {renderRichText(entry.fields.session1.content)}
@@ -47,7 +53,7 @@ function Agenda() {
         </div>
     ))
 
-    return [session1, session2, lunch, extraInformation, session3, session4, session5];
+    return [comment, session1, session2, lunch, extraInformation, session3, session4, session5];
 }
 
 export default Agenda;

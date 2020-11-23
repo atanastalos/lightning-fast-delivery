@@ -24,7 +24,7 @@ import event2 from '../static/events/event2.jpg';
 function HomePage() {
 
     const overview = Overview();
-    const [session1, session2, lunch, extraInformation, session3, session4, session5] = Agenda();
+    const [comment, session1, session2, lunch, extraInformation, session3, session4, session5] = Agenda();
     const coach = Coach();
 
     const entries = useEntries('dateOfNextWorkshop');
@@ -108,6 +108,9 @@ function HomePage() {
                         <Col md={5}>
                             <div id="agenda">
                                 <h2>Agenda</h2>
+                                <div className="comment">
+                                    <p>{comment}</p>
+                                </div>
                                 <div className="session">
                                     {session1}
                                 </div>

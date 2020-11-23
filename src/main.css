@@ -3,6 +3,7 @@ body {
     background-image: url("./static/overview-bg.png");
     background-size: 2000px;
     background-repeat: no-repeat;
+    padding-right: 40px;
 }
 
 p {
@@ -154,6 +155,10 @@ h5 {
     color: #efecfd;
 }
 
+#agenda .comment p {
+    margin-bottom: 30px;
+}
+
 #agenda .session {
     border-top: 3px solid;
     border-image: linear-gradient(to right, #efecfd 0%, #f42272 100%) 1;
@@ -290,7 +295,7 @@ h5 {
     color: #f42272;
 }
 
-#tito .tito-ticket-description, .tito-ticket-price, .tito-badge-link, .tito-ticket-quantity {
+#tito .tito-ticket-description, .tito-ticket-price, .tito-badge-link, .tito-ticket-quantity, .tito-degressive-price-desc {
     color: #efecfd;
 }
 
@@ -399,6 +404,10 @@ h5 {
     #overview .viewWith2Cols {
         display: none;
     }
+
+    #overview .viewWith1Col {
+        text-align: center;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -416,6 +425,10 @@ h5 {
 @media screen and (max-width: 767px) {
     #overview .viewWith1Col, .react-parallax-content {
         display: none;
+    }
+
+    #overview .viewWith2Cols {
+        text-align: center;
     }
 
     .col-md-4 {
@@ -460,6 +473,16 @@ h5 {
 @media screen and (max-width: 1000px) {
     .w-50 {
         width: 70%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    body {
+        padding-right: 0;
+    }
+
+    #overview .col-md-5 img {
+        width: 100%;
     }
 }
 
