@@ -15,6 +15,10 @@ h2 {
     padding-bottom: 20px;
 }
 
+ul {
+    list-style: none;
+}
+
 strong {
     color: #efecfd;
 }
@@ -59,12 +63,12 @@ strong {
     font-weight: 100;
 }
 
-.menu .nav p {
+.menu .nav li {
     padding-bottom: 30px;
     font-weight: bold;
 }
 
-.menu .nav p a {
+.menu .nav li a {
     display: block;
     text-decoration: none;
     color: inherit;
@@ -72,7 +76,7 @@ strong {
     -webkit-transition: all 0.3s;
 }
 
-.menu .nav p a:hover {
+.menu .nav li a:hover {
     color: #0b032d;
 }
 
@@ -115,12 +119,12 @@ h5 {
     font-weight: normal;
 }
 
-.dates h6 {
+.dates p {
     padding-right: 20px;
-    padding-top: 20px;
     margin: auto;
     font-weight: bolder;
     font-size: larger;
+    text-align: center;
 }
 
 .btn {
@@ -425,10 +429,6 @@ h5 {
 @media screen and (max-width: 767px) {
     #overview .viewWith1Col, .react-parallax-content {
         display: none;
-    }
-
-    body {
-        padding-right: 40px;
     }
 
     #overview .viewWith2Cols {

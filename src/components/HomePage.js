@@ -20,6 +20,7 @@ import profil from '../static/profil.png';
 import event3 from '../static/events/event3.jpg';
 import event5 from '../static/events/event5.jpg';
 import event2 from '../static/events/event2.jpg';
+import renderRichText from "../hooks/renderRichText";
 
 function HomePage() {
 
@@ -31,23 +32,23 @@ function HomePage() {
 
     const date = entries.map((entry) => (
         <div className="entry" key={entry.sys.id}>
-            <h6>{entry.fields.dateOfNextWorkshop}</h6>
+            {renderRichText(entry.fields.date.content)}
         </div>
     ))
 
     return (
         <>
-            <div className="menu">
+            <nav className="menu">
                 <div className="title">MENU</div>
-                <div className="nav">
-                    <p><a href="#overview">Overview</a></p>
-                    <p><a href="#agenda">Agenda</a></p>
-                    <p><a href="#coach">Coach</a></p>
-                    <p><a href="#get-tickets">Get tickets</a></p>
-                    <p><a href="/contact" target="_blank">Contact</a></p>
-                    <p><a href="/coc" target="_blank">CoC</a></p>
-                </div>
-            </div>
+                <ul className="nav">
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#agenda">Agenda</a></li>
+                    <li><a href="#coach">Coach</a></li>
+                    <li><a href="#get-tickets">Get tickets</a></li>
+                    <li><a href="/contact" target="_blank">Contact</a></li>
+                    <li><a href="/coc" target="_blank">CoC</a></li>
+                </ul>
+            </nav>
 
             <div id="overview">
                 <Container>
