@@ -15,8 +15,9 @@ h2 {
     padding-bottom: 20px;
 }
 
-ul {
-    list-style: none;
+.menu .nav li {
+    display: inline-block;
+    padding-right: 25px;
 }
 
 strong {
@@ -28,7 +29,7 @@ strong {
     background: #f42272;
     width: 160px;
     height: 100%;
-    padding-left: 70px;
+    padding-left: 50px;
     position: fixed;
     z-index: 100;
     -webkit-box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
