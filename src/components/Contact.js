@@ -34,13 +34,13 @@ function Contact() {
 
     return (
         <>
-            <div className="menu">
+            <nav className="menu">
                 <div className="title">MENU</div>
-                <div className="nav">
-                    <p style={{paddingRight: "20px"}}><a href="/" target="_blank">Home</a></p>
-                    <p><a href="/coc" target="_blank">CoC</a></p>
-                </div>
-            </div>
+                <ul className="nav">
+                    <li style={{paddingRight: "20px"}}><a href="/" target="_blank">Home</a></li>
+                    <li><a href="/coc" target="_blank">CoC</a></li>
+                </ul>
+            </nav>
 
             <div className="alert">
                 {(resultOfSendingEmail) ? tryToSendEmail() : null}

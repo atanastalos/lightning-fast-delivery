@@ -13,13 +13,13 @@ function CoC() {
 
     return (
         <>
-            <div className="menu">
+            <nav className="menu">
                 <div className="title">MENU</div>
-                <div className="nav">
-                    <p><a href="/" target="_blank">Home</a></p>
-                    <p><a href="/contact" target="_blank">Contact</a></p>
-                </div>
-            </div>
+                <ul className="nav">
+                    <li><a href="/" target="_blank">Home</a></li>
+                    <li><a href="/contact" target="_blank">Contact</a></li>
+                </ul>
+            </nav>
 
             <div id="coc">
                 <h5>Code of Conduct</h5>
