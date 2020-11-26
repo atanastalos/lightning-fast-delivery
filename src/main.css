@@ -363,6 +363,10 @@ h5 {
 
 .g-recaptcha {
     padding-bottom: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+    transform:scale(0.77);
+    transform-origin:0 0;
 }
 
 #success-alert {
@@ -474,18 +478,6 @@ h5 {
     }
 }
 
-/*@media screen and (min-width: 1001px) {*/
-/*    .w-50 {*/
-/*        width: 60%;*/
-/*    }*/
-/*}*/
-
-/*@media screen and (max-width: 1000px) {*/
-/*    .w-50 {*/
-/*        width: 70%;*/
-/*    }*/
-/*}*/
-
 @media screen and (max-width: 425px) {
     #overview .col-md-5 img {
         width: 100%;
@@ -520,6 +512,12 @@ h5 {
     #coc h5 {
         text-align: left;
         padding: 5px;
+    }
+}
+
+@media screen and (min-width: 450px) {
+    .contact-form {
+        margin: auto;
     }
 }
 

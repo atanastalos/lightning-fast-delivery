@@ -45,7 +45,7 @@ function Contact() {
             <div className="alert">
                 {(resultOfSendingEmail) ? tryToSendEmail() : null}
             </div>
-            <div className='w-50 mx-auto p-3 mt-2'>
+            <div className='w-80 mx-auto p-3 mt-2'>
                 <Form className="contact-form" method="post" onSubmit={sendEmail}>
                     <Form.Group controlId="formGroupUsername">
                         <Form.Label>Name</Form.Label>
@@ -63,7 +63,7 @@ function Contact() {
                         <Form.Label>Message</Form.Label>
                         <Form.Control as="textarea" rows="10" name='message'/>
                     </Form.Group>
-                    <div className="g-recaptcha" data-sitekey={process.env.REACT_APP_RECAPTCHA_KEY}></div>
+                    <div className="g-recaptcha" data-sitekey={process.env.REACT_APP_RECAPTCHA_KEY} data-size="compact"></div>
                     <Button variant="dark" type='submit'
                             value='Send'>Send</Button>
                 </Form>
