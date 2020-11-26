@@ -358,6 +358,11 @@ h5 {
     background-color: #f42272;
     padding: 30px;
     color: #efecfd;
+    width: 90%;
+}
+
+.g-recaptcha {
+    padding-bottom: 20px;
 }
 
 #success-alert {
@@ -469,17 +474,17 @@ h5 {
     }
 }
 
-@media screen and (min-width: 1001px) {
-    .w-50 {
-        width: 60%;
-    }
-}
+/*@media screen and (min-width: 1001px) {*/
+/*    .w-50 {*/
+/*        width: 60%;*/
+/*    }*/
+/*}*/
 
-@media screen and (max-width: 1000px) {
-    .w-50 {
-        width: 70%;
-    }
-}
+/*@media screen and (max-width: 1000px) {*/
+/*    .w-50 {*/
+/*        width: 70%;*/
+/*    }*/
+/*}*/
 
 @media screen and (max-width: 425px) {
     #overview .col-md-5 img {
