@@ -290,6 +290,11 @@ h5 {
     width: 90%;
 }
 
+#tito .tito-wrapper ul {
+    color: #efecfd;
+    list-style: none;
+}
+
 #tito .tito-ticket.row {
     border-bottom: 1px solid;
     border-image: linear-gradient(to right, #efecfd 0%, #f42272 100%) 1;
